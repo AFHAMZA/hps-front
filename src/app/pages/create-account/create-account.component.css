@@ -1,0 +1,66 @@
+.page-title {
+    padding: 50px 0;
+    background-color: #f8f9fa;
+  }
+  
+  .ipt-title {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .ipn-subtitle {
+    font-size: 1.2rem;
+    color: #6c757d;
+  }
+  
+  .gray-simple {
+    background-color: #f1f3f5;
+    padding: 50px 0;
+  }
+  
+  .card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-group {
+    position: relative;
+  }
+  
+  .form-control {
+    padding-right: 40px; /* Space for the toggle icon */
+  }
+  
+  .cursor-pointer {
+    cursor: pointer;
+  }
+  
+  .text-danger {
+    font-size: 0.875rem;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+  }
+  
+  .full-width {
+    width: 100%;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .link {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .link:hover {
+    text-decoration: underline;
+  }
