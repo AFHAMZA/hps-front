@@ -49,6 +49,12 @@
         <a [routerLink]="'/listings-list-with-sidebar'" class="btn btn-primary px-lg-5 rounded">Explore More Clients</a>
       </div>
     </div>
+
+      <button (click)="previousPage()" [disabled]="page === 1" class="btn btn-primary me-2">Previous</button>
+  <span class="mx-2">Page {{ page }} of {{ totalPages }}</span>
+  <button (click)="nextPage()" [disabled]="page * limit >= totalClients" class="btn btn-primary ms-2">Next</button>
+
+
   </div>
 </section>
 
@@ -74,7 +80,7 @@
             </div>
             <div class="mb-3 flex-grow-1">
               <label for="createPhone" class="form-label">Phone Number</label>
-              <input type="tel" class="form-control" id="createPhone" formControlName="phone" placeholder="1128499531" />
+              <input type="tel" class="form-control" id="createPhone" formControlName="phone" placeholder="123456789" />
             </div>
           </div>
           <div *ngIf="createClientForm.get('phone')?.touched && createClientForm.get('phone')?.invalid" class="text-danger">
@@ -111,7 +117,7 @@
           </div>
           <div class="mb-3  flex-grow-1">
             <label for="updatePhone" class="form-label">Phone Number</label>
-            <input type="tel" class="form-control" id="updatePhone" formControlName="phone" placeholder="1128499531" />
+            <input type="tel" class="form-control" id="updatePhone" formControlName="phone" placeholder="123456789" />
           </div>
         </div>
         <div *ngIf="updateClientForm.get('phone')?.touched && updateClientForm.get('phone')?.invalid" class="text-danger">

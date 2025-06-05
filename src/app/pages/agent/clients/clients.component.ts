@@ -36,6 +36,9 @@ export class ClientsComponent implements OnInit {
   selectedClientId: string | null = null;
   errorMessage: string | null = null;
   countryCodes: CountryCode[] = COUNTRY_CODES;
+  page: number = 1;
+  limit: number = 10;
+  totalClients: number = 0;
 
   constructor(
     private clientsService: ClientsService,
@@ -57,9 +60,10 @@ export class ClientsComponent implements OnInit {
   }
 
   getClients(): void {
-    this.clientsService.getClients().subscribe(
-      (data: any[]) => {
-        this.clientData = Object.values(data)[0] || [];
+    this.clientsService.getClients(this.page, this.limit).subscribe(
+      (data: { clients: ClientData[]; total: number }) => {
+        this.clientData = data.clients || [];
+        this.totalClients = data.total;
         console.log('Clients fetched:', this.clientData);
       },
       (error) => {
@@ -68,6 +72,26 @@ export class ClientsComponent implements OnInit {
       }
     );
   }
+
+  get totalPages(): number {
+    return Math.ceil(this.totalClients / this.limit);
+  }
+
+    
+  previousPage() {
+    if (this.page > 1) {
+      this.page--;
+      this.getClients();
+    }
+  }
+  
+  nextPage() {
+    if (this.page * this.limit < this.totalClients) {
+      this.page++;
+      this.getClients();
+    }
+  }
+  
 
   createClient(): void {
     if (this.createClientForm.invalid) {

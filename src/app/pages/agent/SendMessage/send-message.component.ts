@@ -45,6 +45,10 @@ export class SendMessageComponent implements OnInit {
   countryCodes: CountryCode[] = COUNTRY_CODES;
   clients: ClientData[] = [];
   activeTab: 'single' | 'broadcast' = 'single';
+  totalClients: number = 0;
+  currentPage: number = 1;
+  pageSize: number = 100; 
+  totalPages: number = 0;
 
   constructor(
     private sendMessageService: SendMessageService,
@@ -73,16 +77,25 @@ export class SendMessageComponent implements OnInit {
   }
 
   loadClients(): void {
-    this.clientsService.getClients().subscribe({
-      next: (data: any[]) => {
-        this.clients = Object.values(data)[0] || [];
+    this.clientsService.getClients(this.currentPage, this.pageSize).subscribe(
+      (data: { clients: ClientData[]; total: number }) => {
+        this.clients = data.clients || [];
+        this.totalClients = data.total; 
+        this.totalPages = Math.ceil(this.totalClients / this.pageSize);
         console.log('Clients fetched:', this.clients);
       },
-      error: (error) => {
+      (error) => {
         console.error('Error fetching clients:', error);
         this.errorMessage = 'Failed to load clients';
-      },
-    });
+      }
+    );
+  }
+
+  changePage(page: number): void {
+    if (page >= 1 && page <= this.totalPages) {
+      this.currentPage = page;
+      this.loadClients();
+    }
   }
 
   setupSendMessageFormListeners(): void {

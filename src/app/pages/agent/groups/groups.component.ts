@@ -39,6 +39,8 @@ export class GroupsComponent implements OnInit {
   errorMessage: string | null = null;
   successMessage: string | null = null;
   loadingGroupId: string | null = null;
+  loadingGroups: boolean = false;
+
 
   constructor(private groupsService: GroupsService) {}
 
@@ -47,6 +49,7 @@ export class GroupsComponent implements OnInit {
   }
 
   getGroups(): void {
+    this.loadingGroups = true;
     this.groupsService.getGroups().subscribe(
       (data: { groups: GroupData[] }) => {
         this.groupData = data.groups || [];
@@ -56,6 +59,9 @@ export class GroupsComponent implements OnInit {
       (error) => {
         console.error('Error fetching groups:', error);
         this.errorMessage = 'Failed to load groups';
+      },
+      () => {
+        this.loadingGroups = false;
       }
     );
   }
@@ -74,7 +80,10 @@ export class GroupsComponent implements OnInit {
         console.error('Error fetching participants:', error);
         this.errorMessage = error.error?.message || 'Failed to fetch and save participants';
         this.loadingGroupId = null;
-      }
+      },
+      () => {
+        this.loadingGroupId = null;
+        }
     );
   }
 }

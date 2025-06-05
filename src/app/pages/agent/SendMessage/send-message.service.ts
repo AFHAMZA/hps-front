@@ -31,7 +31,7 @@ export class SendMessageService {
 
   /**
    * Sends a single WhatsApp message to a specified phone number.
-   * @param phone Phone number with country code (e.g., +201128499531).
+   * @param phone Phone number with country code (e.g., +123456789).
    * @param message Message content.
    * @returns Observable with the message response.
    */

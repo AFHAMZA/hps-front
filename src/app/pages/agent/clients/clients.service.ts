@@ -19,9 +19,11 @@ export class ClientsService {
 
   constructor(private http: HttpClient) {}
 
-  getClients(): Observable<ApiResponse[]> {
-    return this.http.get<ApiResponse[]>(`${this.apiUrl}${this.data}`);
+
+  getClients(page: number, limit: number): Observable<{ clients: ApiResponse[]; total: number }> {
+    return this.http.get<{ clients: ApiResponse[]; total: number }>(`${this.apiUrl}${this.data}?page=${page}&limit=${limit}`);
   }
+
 
   createClient(client: {
     phone: string;

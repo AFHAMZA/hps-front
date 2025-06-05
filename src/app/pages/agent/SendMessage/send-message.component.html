@@ -55,7 +55,7 @@
               role="tabpanel"
             >
               <form [formGroup]="sendMessageForm" (ngSubmit)="sendMessage()">
-                <div class="mb-3">
+                <!-- <div class="mb-3">
                   <label class="form-label">Input Type</label>
                   <div class="d-flex gap-3">
                     <div class="form-check">
@@ -79,7 +79,7 @@
                       <label class="form-check-label" for="clientInput">Select Client</label>
                     </div>
                   </div>
-                </div>
+                </div> -->
 
                 <div *ngIf="sendMessageForm.get('inputType')?.value === 'manual'" class="d-flex align-items-center gap-2">
                   <div class="mb-3">
@@ -98,7 +98,7 @@
                       class="form-control"
                       id="phone"
                       formControlName="phone"
-                      placeholder="1128499531"
+                      placeholder="123456789"
                     />
                     <div *ngIf="sendMessageForm.get('phone')?.touched && sendMessageForm.get('phone')?.invalid" class="text-danger">
                       <div *ngIf="sendMessageForm.get('phone')?.errors?.['required']">Phone number is required</div>
@@ -152,6 +152,18 @@
               id="broadcast"
               role="tabpanel"
             >
+
+            <div *ngIf="totalClients > pageSize" class="d-flex justify-content-between">
+              <button class="btn btn-secondary" (click)="changePage(currentPage - 1)" [disabled]="currentPage === 1">
+                <i class="fa fa-arrow-left"></i>
+              </button>
+              <span>Page {{ currentPage }} of {{ totalPages }}</span>
+              <button class="btn btn-secondary" (click)="changePage(currentPage + 1)" [disabled]="currentPage === totalPages">
+                <i class="fa fa-arrow-right"></i>
+              </button>
+            </div>
+
+
               <form [formGroup]="broadcastForm" (ngSubmit)="sendBroadcast()">
                 <div class="mb-3">
                   <label for="messagePool" class="form-label">Messages (one per line)</label>
@@ -168,9 +180,10 @@
                 </div>
                 <div class="mb-3">
                   <label for="clientIds" class="form-label">Select Clients (leave empty for all)</label>
-                  <select multiple class="form-control" id="clientIds" formControlName="clientAds">
+                  <select multiple class="form-control" id="clientIds" formControlName="clientIds">
                     <option *ngFor="let client of clients" [value]="client._id">{{ client.phone }}</option>
                   </select>
+                  
                 </div>
                 
                 <div class="alert alert-danger">
