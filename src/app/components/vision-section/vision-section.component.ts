@@ -3,15 +3,16 @@ import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-footer',
+  selector: 'app-vision-section',
   imports: [
     CommonModule,
-    RouterLink
-  ],
-  templateUrl: './footer.component.html',
-  styleUrl: './footer.component.css'
+    RouterLink,
+
+],
+  templateUrl: './vision-section.component.html',
+  styleUrl: './vision-section.component.css'
 })
-export class FooterComponent {
+export class VisionSectionComponent {
 
 
 }
