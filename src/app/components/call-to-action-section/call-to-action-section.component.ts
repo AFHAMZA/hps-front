@@ -58,7 +58,7 @@ export class CallToActionSectionComponent implements AfterViewInit {
           environment.emailjs.publicKey
         )
         .then(() => {
-          this.toastr.success('📩 Message sent successfully!', 'Thank you');
+          this.toastr.success('Message sent successfully!', 'Thank you');
           form.reset();
         })
         .catch((error) => {
