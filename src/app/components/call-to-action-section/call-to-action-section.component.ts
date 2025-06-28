@@ -1,6 +1,15 @@
+import {
+  Component,
+  AfterViewInit,
+  ViewChild,
+  ElementRef,
+  inject,
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import emailjs from 'emailjs-com';
+import { ToastrService } from 'ngx-toastr';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-call-to-action-section',
@@ -10,9 +19,10 @@ import { RouterLink } from '@angular/router';
   styleUrl: './call-to-action-section.component.css',
 })
 export class CallToActionSectionComponent implements AfterViewInit {
-  email = 'investors@hpsaviation.com';
-
+  email = environment.emailjs.email;
   @ViewChild('contactForm') contactFormRef!: ElementRef<HTMLFormElement>;
+
+  private toastr = inject(ToastrService);
 
   ngAfterViewInit(): void {
     const form = this.contactFormRef.nativeElement;
@@ -22,19 +32,39 @@ export class CallToActionSectionComponent implements AfterViewInit {
 
       const name = (form.querySelector('#name') as HTMLInputElement)?.value;
       const email = (form.querySelector('#email') as HTMLInputElement)?.value;
-      const interest = (form.querySelector('#interest') as HTMLSelectElement)
-        ?.value;
       const message = (form.querySelector('#message') as HTMLTextAreaElement)
         ?.value;
+      const title = (form.querySelector('#interest') as HTMLInputElement)?.value;
 
-      if (!name || !email || !message) {
-        alert('Please fill in all required fields.');
+      if (!name || !email || !message || !title) {
+        let missing = [];
+        if (!name) missing.push('Name');
+        if (!email) missing.push('Email');
+        if (!message) missing.push('Message');
+        if (!title) missing.push('Interest');
+
+        this.toastr.error(
+          `Missing fields: ${missing.join(', ')}`,
+          'Missing Data'
+        );
         return;
       }
 
-      alert('Thank you for your interest! Our team will contact you shortly.');
-
-      form.reset();
+      emailjs
+        .sendForm(
+          environment.emailjs.serviceId,
+          environment.emailjs.templateId,
+          form,
+          environment.emailjs.publicKey
+        )
+        .then(() => {
+          this.toastr.success('📩 Message sent successfully!', 'Thank you');
+          form.reset();
+        })
+        .catch((error) => {
+          console.error('EmailJS error:', error);
+          this.toastr.error('Sending failed, please try again later.', 'Error');
+        });
     });
   }
 }
