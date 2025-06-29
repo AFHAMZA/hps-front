@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
-
+import { SoundService } from '../../services/sound.service';
 @Component({
   selector: 'app-innovation-section',
   standalone: true,
@@ -10,6 +10,14 @@ import { RouterLink } from '@angular/router';
   styleUrl: './innovation-section.component.css',
 })
 export class InnovationSectionComponent {
+
+
+  constructor(private soundService: SoundService) {}
+
+  playHoverSound() {
+    this.soundService.playSound('/assets/sounds/1.wav');
+  }
+
   advantages = [
     {
       id: 1,

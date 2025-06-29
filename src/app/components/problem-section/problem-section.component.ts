@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { SoundService } from '../../services/sound.service';
 @Component({
   selector: 'app-problem-section',
   standalone: true,
@@ -10,9 +11,19 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
   styleUrl: './problem-section.component.css',
 })
 export class ProblemSectionComponent {
+
+  
+  
+    playHoverSound() {
+      this.soundService.playSound('/assets/sounds/1.wav');
+    }
+
+
+
+
   problems: { title: string; description: string; icon: SafeHtml }[] = [];
 
-  constructor(private sanitizer: DomSanitizer) {
+  constructor(private sanitizer: DomSanitizer,private soundService: SoundService) {
     this.problems = [
       {
         title: 'Inefficiency',

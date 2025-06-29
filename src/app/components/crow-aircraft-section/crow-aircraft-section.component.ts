@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { SoundService } from '../../services/sound.service';
 @Component({
   selector: 'app-crow-aircraft-section',
   imports: [CommonModule, RouterLink],
@@ -12,7 +13,11 @@ export class CrowAircraftSectionComponent {
   applications: { title: string; description: string; icon: SafeHtml }[] = [];
   technicals: { title: string; description: string }[] = [];
 
-  constructor(private sanitizer: DomSanitizer) {
+  playHoverSound() {
+    this.soundService.playSound('/assets/sounds/1.wav');
+  }
+
+  constructor(private sanitizer: DomSanitizer,private soundService: SoundService) {
     this.applications = [
       {
         title: '',

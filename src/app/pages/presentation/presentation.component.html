@@ -1,0 +1,1107 @@
+<div class="progress-bar" [style.width.%]="progressWidth"></div>
+
+<div class="slide-container">
+  <!-- Slide 1: Cover -->
+  <div class="slide" [ngClass]="{ active: currentSlide === 0 }" id="slide1">
+    <div class="grid-pattern"></div>
+    <div class="flex flex-col items-center justify-center h-full text-center">
+      <div class="floating">
+        <svg
+          class="w-40 h-40 mb-8"
+          viewBox="0 0 200 200"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <defs>
+            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop
+                offset="0%"
+                style="stop-color: var(--electric-cyan); stop-opacity: 1"
+              ></stop>
+              <stop
+                offset="100%"
+                style="stop-color: var(--neon-mint); stop-opacity: 1"
+              ></stop>
+            </linearGradient>
+          </defs>
+          <path
+            fill="url(#grad1)"
+            d="M100,20 L160,60 L160,140 L100,180 L40,140 L40,60 Z"
+          ></path>
+          <path
+            fill="none"
+            stroke="white"
+            stroke-width="2"
+            d="M100,40 L140,65 L140,115 L100,140 L60,115 L60,65 Z"
+          ></path>
+          <circle cx="100" cy="100" r="15" fill="white"></circle>
+          <path
+            fill="none"
+            stroke="white"
+            stroke-width="2"
+            d="M70,80 C70,50 130,50 130,80"
+          ></path>
+          <path
+            fill="none"
+            stroke="white"
+            stroke-width="2"
+            d="M70,120 C70,150 130,150 130,120"
+          ></path>
+        </svg>
+      </div>
+      <h1 class="text-6xl mb-4 title">HPS AVIATION</h1>
+      <p class="text-xl mb-8 subtitle">The Next Step to the Sky</p>
+      <div class="tech-border mt-8 max-w-lg">
+        <p class="text-gray-300">
+          Revolutionary propulsion technology inspired by nature, designed for
+          the future of aviation.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 2: The Problem -->
+  <div class="slide" [ngClass]="{ active: currentSlide === 1 }" id="slide2">
+    <div class="grid-pattern"></div>
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-4xl mb-6 title">Why Propellers Are Holding Us Back</h2>
+      <div class="flex flex-col md:flex-row gap-8">
+        <div class="tech-border flex-1">
+          <div class="flex items-center mb-4">
+            <svg
+              class="w-8 h-8 mr-3"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                stroke="var(--electric-cyan)"
+                stroke-width="2"
+              ></path>
+              <path
+                d="M15 9L9 15"
+                stroke="var(--electric-cyan)"
+                stroke-width="2"
+              ></path>
+              <path
+                d="M9 9L15 15"
+                stroke="var(--electric-cyan)"
+                stroke-width="2"
+              ></path>
+            </svg>
+            <h3 class="text-xl font-bold">Noise Pollution</h3>
+          </div>
+          <p class="text-gray-300">
+            Traditional propellers generate excessive noise (85-100 dB),
+            limiting urban applications and causing noise pollution.
+          </p>
+        </div>
+        <div class="tech-border flex-1">
+          <div class="flex items-center mb-4">
+            <svg
+              class="w-8 h-8 mr-3"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                stroke="var(--electric-cyan)"
+                stroke-width="2"
+              ></path>
+              <path
+                d="M15 9L9 15"
+                stroke="var(--electric-cyan)"
+                stroke-width="2"
+              ></path>
+              <path
+                d="M9 9L15 15"
+                stroke="var(--electric-cyan)"
+                stroke-width="2"
+              ></path>
+            </svg>
+            <h3 class="text-xl font-bold">Inefficient Energy Use</h3>
+          </div>
+          <p class="text-gray-300">
+            Current electric propulsion systems waste energy through turbulence
+            and drag, limiting range and performance.
+          </p>
+        </div>
+      </div>
+      <div class="flex flex-col md:flex-row gap-8 mt-8">
+        <div class="tech-border flex-1">
+          <div class="flex items-center mb-4">
+            <svg
+              class="w-8 h-8 mr-3"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                stroke="var(--electric-cyan)"
+                stroke-width="2"
+              ></path>
+              <path
+                d="M15 9L9 15"
+                stroke="var(--electric-cyan)"
+                stroke-width="2"
+              ></path>
+              <path
+                d="M9 9L15 15"
+                stroke="var(--electric-cyan)"
+                stroke-width="2"
+              ></path>
+            </svg>
+            <h3 class="text-xl font-bold">Limited Control</h3>
+          </div>
+          <p class="text-gray-300">
+            Conventional propulsion offers limited degrees of freedom, requiring
+            complex mechanical systems for maneuverability.
+          </p>
+        </div>
+        <div class="tech-border flex-1">
+          <div class="flex items-center mb-4">
+            <svg
+              class="w-8 h-8 mr-3"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                stroke="var(--electric-cyan)"
+                stroke-width="2"
+              ></path>
+              <path
+                d="M15 9L9 15"
+                stroke="var(--electric-cyan)"
+                stroke-width="2"
+              ></path>
+              <path
+                d="M9 9L15 15"
+                stroke="var(--electric-cyan)"
+                stroke-width="2"
+              ></path>
+            </svg>
+            <h3 class="text-xl font-bold">Safety Concerns</h3>
+          </div>
+          <p class="text-gray-300">
+            Exposed high-speed propeller blades pose significant safety risks to
+            operators, passengers, and bystanders.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 3: The Solution -->
+  <div class="slide" [ngClass]="{ active: currentSlide === 2 }" id="slide3">
+    <div class="grid-pattern"></div>
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-4xl mb-6 title">Humming Propulsion System (HPS)</h2>
+      <div class="flex flex-col md:flex-row gap-8">
+        <div class="md:w-1/2">
+          <div class="tech-border h-full">
+            <h3 class="text-2xl mb-4 subtitle">Inspired by Nature</h3>
+            <p class="mb-4 text-gray-300">
+              Our revolutionary propulsion system mimics the efficient wing
+              movements of hummingbirds, combining rotational and oscillatory
+              motion patterns.
+            </p>
+            <div class="mt-6">
+              <div class="spec-item">
+                <svg
+                  class="spec-icon w-6 h-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5 13L9 17L19 7"
+                    stroke="var(--electric-cyan)"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+                <span>Full 6 degrees of freedom thrust control</span>
+              </div>
+              <div class="spec-item">
+                <svg
+                  class="spec-icon w-6 h-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5 13L9 17L19 7"
+                    stroke="var(--electric-cyan)"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+                <span>Ultra-quiet: < 65 dB</span>
+              </div>
+              <div class="spec-item">
+                <svg
+                  class="spec-icon w-6 h-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5 13L9 17L19 7"
+                    stroke="var(--electric-cyan)"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+                <span>25% more efficient than propellers</span>
+              </div>
+              <div class="spec-item">
+                <svg
+                  class="spec-icon w-6 h-6"
+                  viewBox="0 0  evangelism 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5 13L9 17L19 7"
+                    stroke="var(--electric-cyan)"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+                <span>Enclosed design for enhanced safety</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="md:w-1/2 flex justify-center items-center">
+          <div class="floating">
+            <svg
+              class="w-64 h-64"
+              viewBox="0 0 200 200"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <defs>
+                <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop
+                    offset="0%"
+                    style="stop-color: var(--electric-cyan); stop-opacity: 1"
+                  ></stop>
+                  <stop
+                    offset="100%"
+                    style="stop-color: var(--neon-mint); stop-opacity: 1"
+                  ></stop>
+                </linearGradient>
+              </defs>
+              <circle
+                cx="100"
+                cy="100"
+                r="80"
+                fill="none"
+                stroke="url(#grad2)"
+                stroke-width="2"
+              ></circle>
+              <circle
+                cx="100"
+                cy="100"
+                r="40"
+                fill="none"
+                stroke="white"
+                stroke-width="1"
+                opacity="0.5"
+              ></circle>
+              <path
+                d="M100,20 C130,50 130,150 100,180 C70,150 70,50 100,20"
+                fill="none"
+                stroke="url(#grad2)"
+                stroke-width="2"
+              >
+                <animateTransform
+                  attributeName="transform"
+                  type="rotate"
+                  from="0 100 100"
+                  to="360 100 100"
+                  dur="10s"
+                  repeatCount="indefinite"
+                ></animateTransform>
+              </path>
+              <path
+                d="M20,100 C50,70 150,70 180,100 C150,130 50,130 20,100"
+                fill="none"
+                stroke="url(#grad2)"
+                stroke-width="2"
+              >
+                <animateTransform
+                  attributeName="transform"
+                  type="rotate"
+                  from="0 100 100"
+                  to="360 100 100"
+                  dur="10s"
+                  repeatCount="indefinite"
+                ></animateTransform>
+              </path>
+              <circle cx="100" cy="100" r="10" fill="white"></circle>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 4: The Application -->
+  <div class="slide" [ngClass]="{ active: currentSlide === 3 }" id="slide4">
+    <div class="grid-pattern"></div>
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-4xl mb-6 title">
+        CROW: The First Hydrogen-Powered Flying Car
+      </h2>
+      <div class="flex flex-col md:flex-row gap-8">
+        <div class="md:w-1/2">
+          <div class="tech-border h-full">
+            <h3 class="text-2xl mb-4 subtitle">Technical Specifications</h3>
+            <div class="mt-6">
+              <div class="spec-item">
+                <svg
+                  class="spec-icon w-6 h-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M13 2L3 14H12L11 22L21 10H12L13 2Z"
+                    stroke="var(--electric-cyan)"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+                <span>Speed: 500 km/h</span>
+              </div>
+              <div class="spec-item">
+                <svg
+                  class="spec-icon w-6 h-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke="var(--electric-cyan)"
+                    stroke-width="2"
+                  ></circle>
+                  <path
+                    d="M12 6V12L16 14"
+                    stroke="var(--electric-cyan)"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  ></path>
+                </svg>
+                <span>Range: 1500 km</span>
+              </div>
+              <div class="spec-item">
+                <svg
+                  class="spec-icon w-6 h-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M3 20H21"
+                    stroke="var(--electric-cyan)"
+                    stroke-width="2"
+                  ></path>
+                  <path
+                    d="M5 20V9L12 4L19 9V20"
+                    stroke="var(--electric-cyan)"
+                    stroke-width="2"
+                  ></path>
+                </svg>
+                <span>Altitude: 12,000 ft</span>
+              </div>
+              <div class="spec-item">
+                <svg
+                  class="spec-icon w-6 h-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    cx="12"
+                    cy="7"
+                    r="4"
+                    stroke="var(--electric-cyan)"
+                    stroke-width="2"
+                  ></circle>
+                  <path
+                    d="M5 21V19C5 16.7909 6.79086 15 9 15H15C17.2091 15 19 16.7909 19 19V21"
+                    stroke="var(--electric-cyan)"
+                    stroke-width="2"
+                  ></path>
+                </svg>
+                <span>Capacity: 5 passengers + cargo</span>
+              </div>
+              <div class="spec-item">
+                <svg
+                  class="spec-icon w-6 h-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M3 12H21"
+                    stroke="var(--electric-cyan)"
+                    stroke-width="2"
+                  ></path>
+                  <path
+                    d="M3 6H21"
+                    stroke="var(--electric-cyan)"
+                    stroke-width="2"
+                  ></path>
+                  <path
+                    d="M3 18H21"
+                    stroke="var(--electric-cyan)"
+                    stroke-width="2"
+                  ></path>
+                </svg>
+                <span>Can land on water and drive on roads</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="md:w-1/2">
+          <div class="tech-border h-full flex flex-col justify-between">
+            <div>
+              <h3 class="text-2xl mb-4 subtitle">Dual Power System</h3>
+              <p class="mb-4 text-gray-300">
+                CROW combines hydrogen fuel cells with advanced battery
+                technology for optimal power management.
+              </p>
+            </div>
+            <div class="mt-4">
+              <svg
+                class="w-full h-48"
+                viewBox="0 0 300 150"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <defs>
+                  <linearGradient
+                    id="carGrad"
+                    x1="0%"
+                    y1="0%"
+                    x2="100%"
+                    y2="0%"
+                  >
+                    <stop
+                      offset="0%"
+                      style="stop-color: var(--electric-cyan); stop-opacity: 1"
+                    ></stop>
+                    <stop
+                      offset="100%"
+                      style="stop-color: var(--neon-mint); stop-opacity: 1"
+                    ></stop>
+                  </linearGradient>
+                </defs>
+                <path
+                  d="M50,80 C50,60 70,50 100,50 L200,50 C230,50 250,60 250,80 L250,100 C250,110 240,120 220,120 L80,120 C60,120 50,110 50,100 Z"
+                  fill="none"
+                  stroke="url(#carGrad)"
+                  stroke-width="2"
+                ></path>
+                <path
+                  d="M70,120 L80,140 L220,140 L230,120"
+                  fill="none"
+                  stroke="url(#carGrad)"
+                  stroke-width="2"
+                ></path>
+                <circle
+                  cx="100"
+                  cy="140"
+                  r="10"
+                  fill="none"
+                  stroke="white"
+                  stroke-width="1"
+                ></circle>
+                <circle
+                  cx="200"
+                  cy="140"
+                  r="10"
+                  fill="none"
+                  stroke="white"
+                  stroke-width="1"
+                ></circle>
+                <path
+                  d="M100,50 L120,20 L180,20 L200,50"
+                  fill="none"
+                  stroke="url(#carGrad)"
+                  stroke-width="2"
+                ></path>
+                <rect
+                  x="130"
+                  y="30"
+                  width="40"
+                  height="20"
+                  fill="none"
+                  stroke="white"
+                  stroke-width="1"
+                  opacity="0.5"
+                ></rect>
+                <circle
+                  cx="80"
+                  cy="70"
+                  r="15"
+                  fill="none"
+                  stroke="url(#carGrad)"
+                  stroke-width="2"
+                >
+                  <animateTransform
+                    attributeName="transform"
+                    type="rotate"
+                    from="0 80 70"
+                    to="360 80 70"
+                    dur="2s"
+                    repeatCount="indefinite"
+                  ></animateTransform>
+                </circle>
+                <circle
+                  cx="220"
+                  cy="70"
+                  r="15"
+                  fill="none"
+                  stroke="url(#carGrad)"
+                  stroke-width="2"
+                >
+                  <animateTransform
+                    attributeName="transform"
+                    type="rotate"
+                    from="0 220 70"
+                    to="360 220 70"
+                    dur="2s"
+                    repeatCount="indefinite"
+                  ></animateTransform>
+                </circle>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 5: Market Vision -->
+  <div class="slide" [ngClass]="{ active: currentSlide === 4 }" id="slide5">
+    <div class="grid-pattern"></div>
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-4xl mb-6 title">Market Vision</h2>
+      <div class="flex flex-col md:flex-row gap-8">
+        <div class="md:w-1/3">
+          <div class="tech-border h-full text-center p-6">
+            <svg
+              class="w-16 h-16 mx-auto mb-4"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                stroke="url(#grad1)"
+                stroke-width="2"
+              ></path>
+              <path
+                d="M16 10H8V16H16V10Z"
+                stroke="url(#grad1)"
+                stroke-width="2"
+              ></path>
+              <path d="M12 7V10" stroke="url(#grad1)" stroke-width="2"></path>
+              <path d="M8 7L6 9" stroke="url(#grad1)" stroke-width="2"></path>
+              <path d="M16 7L18 9" stroke="url(#grad1)" stroke-width="2"></path>
+            </svg>
+            <h3 class="text-xl font-bold mb-2">Air Taxis</h3>
+            <p class="text-gray-300">
+              Urban mobility revolution with on-demand aerial transportation,
+              reducing commute times by 80%.
+            </p>
+          </div>
+        </div>
+        <div class="md:w-1/3">
+          <div class="tech-border h-full text-center p-6">
+            <svg
+              class="w-16 h-16 mx-auto mb-4"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M21 16V8.00002C21 6.34317 19.6569 5.00002 18 5.00002H6C4.34315 5.00002 3 6.34317 3 8.00002V16C3 17.6569 4.34315 19 6 19H18C19.6569 19 21 17.6569 21 16Z"
+                stroke="url(#grad1)"
+                stroke-width="2"
+              ></path>
+              <path d="M3 9H21" stroke="url(#grad1)" stroke-width="2"></path>
+              <path d="M7 15H17" stroke="url(#grad1)" stroke-width="2"></path>
+            </svg>
+            <h3 class="text-xl font-bold mb-2">Cargo Drones</h3>
+            <p class="text-gray-300">
+              Autonomous delivery systems for last-mile logistics and emergency
+              supplies to remote areas.
+            </p>
+          </div>
+        </div>
+        <div class="md:w-1/3">
+          <div class="tech-border h-full text-center p-6">
+            <svg
+              class="w-16 h-16 mx-auto mb-4"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M3 20H21" stroke="url(#grad1)" stroke-width="2"></path>
+              <path
+                d="M5 20V9L12 4L19 9V20"
+                stroke="url(#grad1)"
+                stroke-width="2"
+              ></path>
+              <path d="M9 14H15" stroke="url(#grad1)" stroke-width="2"></path>
+              <path d="M9 10H15" stroke="url(#grad1)" stroke-width="2"></path>
+              <path d="M9 17H15" stroke="url(#grad1)" stroke-width="2"></path>
+            </svg>
+            <h3 class="text-xl font-bold mb-2">Flying Hotels</h3>
+            <p class="text-gray-300">
+              Luxury aerial accommodations offering unique travel experiences
+              and unprecedented mobility.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="tech-border mt-8">
+        <h3 class="text-xl font-bold mb-4">Accessible Aviation</h3>
+        <p class="text-gray-300">
+          Our vision extends beyond technology to democratize flight. With
+          intuitive controls and autonomous capabilities, HPS Aviation will make
+          personal air travel accessible without extensive pilot training.
+        </p>
+        <div class="mt-4 flex justify-between items-center">
+          <div class="text-center">
+            <div class="text-3xl font-bold text-electric-cyan">$980B</div>
+            <div class="text-sm text-gray-400">Global Market by 2035</div>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl font-bold text-electric-cyan">43%</div>
+            <div class="text-sm text-gray-400">Annual Growth Rate</div>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl font-bold text-electric-cyan">2028</div>
+            <div class="text-sm text-gray-400">Commercial Launch</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 6: Roadmap -->
+  <div class="slide" [ngClass]="{ active: currentSlide === 5 }" id="slide6">
+    <div class="grid-pattern"></div>
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-4xl mb-6 title">Roadmap to Revolution</h2>
+      <div class="tech-border">
+        <div class="timeline">
+          <div class="timeline-item">
+            <h3 class="text-xl font-bold mb-2">R&D: 2012–2022</h3>
+            <p class="text-gray-300">
+              Fundamental research and technology development. Patent portfolio
+              established with 12 core technologies.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <h3 class="text-xl font-bold mb-2">Prototype: 2023–2025</h3>
+            <p class="text-gray-300">
+              Full-scale working prototype of the CROW flying car. Testing and
+              certification process begins.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <h3 class="text-xl font-bold mb-2">First Flight: 2026</h3>
+            <p class="text-gray-300">
+              Maiden voyage of the CROW. Public demonstrations and regulatory
+              approval process.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <h3 class="text-xl font-bold mb-2">Manufacturing: 2027</h3>
+            <p class="text-gray-300">
+              Production facility established. Supply chain secured and
+              manufacturing begins.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <h3 class="text-xl font-bold mb-2">Launch: 2028</h3>
+            <p class="text-gray-300">
+              Commercial launch of the CROW flying car. Initial deliveries to
+              strategic partners and early adopters.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="mt-8 flex justify-center">
+        <svg
+          class="w-full h-12"
+          viewBox="0 0 600 30"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <line
+            x1="0"
+            y1="15"
+            x2="600"
+            y2="15"
+            stroke="#333"
+            stroke-width="2"
+          ></line>
+          <circle cx="50" cy="15" r="8" fill="var(--electric-cyan)"></circle>
+          <text x="50" y="35" text-anchor="middle" fill="white" font-size="12">
+            2012
+          </text>
+          <circle cx="175" cy="15" r="8" fill="var(--electric-cyan)"></circle>
+          <text x="175" y="35" text-anchor="middle" fill="white" font-size="12">
+            2023
+          </text>
+          <circle cx="300" cy="15" r="8" fill="var(--neon-mint)"></circle>
+          <text x="300" y="35" text-anchor="middle" fill="white" font-size="12">
+            2026
+          </text>
+          <circle cx="425" cy="15" r="8" fill="var(--neon-mint)"></circle>
+          <text x="425" y="35" text-anchor="middle" fill="white" font-size="12">
+            2027
+          </text>
+          <circle cx="550" cy="15" r="8" fill="var(--neon-mint)"></circle>
+          <text x="550" y="35" text-anchor="middle" fill="white" font-size="12">
+            2028
+          </text>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 7: Investment Opportunity -->
+  <div class="slide" [ngClass]="{ active: currentSlide === 6 }" id="slide7">
+    <div class="grid-pattern"></div>
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-4xl mb-6 title">We're Raising Our First Round</h2>
+      <div class="flex flex-col md:flex-row gap-8">
+        <div class="md:w-1/2">
+          <div class="tech-border h-full">
+            <h3 class="text-2xl mb-4 subtitle">Funding Details</h3>
+            <div class="mb-6">
+              <div class="text-4xl font-bold text-electric-cyan">$25M</div>
+              <div class="text-sm text-gray-400">Series A Funding Target</div>
+            </div>
+            <div class="mt-6">
+              <h4 class="text-lg font-bold mb-2">Use of Funds</h4>
+              <div class="flex items-center justify-between mb-2">
+                <span>R&D Acceleration</span>
+                <span class="text-electric-cyan">40%</span>
+              </div>
+              <div class="w-full bg-gray-700 rounded-full h-2 mb-4">
+                <div
+                  class="bg-gradient-to-r from-electric-cyan to-neon-mint h-2 rounded-full"
+                  style="width: 40%"
+                ></div>
+              </div>
+              <div class="flex items-center justify-between mb-2">
+                <span>Prototype Development</span>
+                <span class="text-electric-cyan">30%</span>
+              </div>
+              <div class="w-full bg-gray-700 rounded-full h-2 mb-4">
+                <div
+                  class="bg-gradient-to-r from-electric-cyan to-neon-mint h-2 rounded-full"
+                  style="width: 30%"
+                ></div>
+              </div>
+              <div class="flex items-center justify-between mb-2">
+                <span>Team Expansion</span>
+                <span class="text-electric-cyan">20%</span>
+              </div>
+              <div class="w-full bg-gray-700 rounded-full h-2 mb-4">
+                <div
+                  class="bg-gradient-to-r from-electric-cyan to-neon-mint h-2 rounded-full"
+                  style="width: 20%"
+                ></div>
+              </div>
+              <div class="flex items-center justify-between mb-2">
+                <span>Certification & Legal</span>
+                <span class="text-electric-cyan">10%</span>
+              </div>
+              <div class="w-full bg-gray-700 rounded-full h-2 mb-4">
+                <div
+                  class="bg-gradient-to-r from-electric-cyan to-neon-mint h-2 rounded-full"
+                  style="width: 10%"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="md:w-1/2">
+          <div class="tech-border h-full">
+            <h3 class="text-2xl mb-4 subtitle">Why Invest Now</h3>
+            <div class="mb-4">
+              <div class="flex items-center mb-3">
+                <svg
+                  class="spec-icon w-6 h-6 mr-3"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5 13L9 17L19 7"
+                    stroke="var(--electric-cyan)"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+                <span class="font-bold">Patent Portfolio</span>
+              </div>
+              <p class="text-gray-300 ml-9">
+                12 patents secured for our core technologies, creating a strong
+                competitive moat.
+              </p>
+            </div>
+            <div class="mb-4">
+              <div class="flex items-center mb-3">
+                <svg
+                  class="spec-icon w-6 h-6 mr-3"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5 13L9 17L19 7"
+                    stroke="var(--electric-cyan)"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+                <span class="font-bold">Strategic Partnerships</span>
+              </div>
+              <p class="text-gray-300 ml-9">
+                Agreements with key aerospace suppliers and hydrogen fuel cell
+                manufacturers.
+              </p>
+            </div>
+            <div class="mb-4">
+              <div class="flex items-center mb-3">
+                <svg
+                  class="spec-icon w-6 h-6 mr-3"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5 13L9 17L19 7"
+                    stroke="var(--electric-cyan)"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+                <span class="font-bold">Regulatory Advantage</span>
+              </div>
+              <p class="text-gray-300 ml-9">
+                Working closely with aviation authorities to establish
+                certification pathways.
+              </p>
+            </div>
+            <div class="mb-4">
+              <div class="flex items-center mb-3">
+                <svg
+                  class="spec-icon w-6 h-6 mr-3"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5 13L9 17L19 7"
+                    stroke="var(--electric-cyan)"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+                <span class="font-bold">Market Timing</span>
+              </div>
+              <p class="text-gray-300 ml-9">
+                Perfect intersection of hydrogen technology maturity and growing
+                demand for sustainable aviation.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 8: Contact -->
+  <div class="slide" [ngClass]="{ active: currentSlide === 7 }" id="slide8">
+    <div class="grid-pattern"></div>
+    <div class="max-w-4xl mx-auto flex flex-col items-center">
+      <h2 class="text-4xl mb-6 title">Join Our Journey</h2>
+      <div class="tech-border w-full max-w-lg text-center">
+        <div class="mb-6">
+          <svg
+            class="w-24 h-24 mx-auto mb-4"
+            viewBox="0 0 200 200"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <defs>
+              <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop
+                  offset="0%"
+                  style="stop-color: var(--electric-cyan); stop-opacity: 1"
+                ></stop>
+                <stop
+                  offset="100%"
+                  style="stop-color: var(--neon-mint); stop-opacity: 1"
+                ></stop>
+              </linearGradient>
+            </defs>
+            <path
+              fill="url(#grad3)"
+              d="M100,20 L160,60 L160,140 L100,180 L40,140 L40,60 Z"
+            ></path>
+            <path
+              fill="none"
+              stroke="white"
+              stroke-width="2"
+              d="M100,40 L140,65 L140,115 L100,140 L60,115 L60,65 Z"
+            ></path>
+            <circle cx="100" cy="100" r="15" fill="white"></circle>
+            <path
+              fill="none"
+              stroke="white"
+              stroke-width="2"
+              d="M70,80 C70,50 130,50 130,80"
+            ></path>
+            <path
+              fill="none"
+              stroke="white"
+              stroke-width="2"
+              d="M70,120 C70,150 130,150 130,120"
+            ></path>
+          </svg>
+          <h1 class="text-3xl mb-2 title">HPS AVIATION</h1>
+          <p class="text-xl subtitle">The Next Step to the Sky</p>
+        </div>
+        <div class="flex flex-col items-center gap-4 mb-6">
+          <div class="flex items-center">
+            <svg
+              class="w-6 h-6 mr-3"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M20 10C20 14.4183 16.4183 18 12 18C7.58172 18 4 14.4183 4 10C4 5.58172 7.58172 2 12 2C16.4183 2 20 5.58172 20 10Z"
+                stroke="var(--electric-cyan)"
+                stroke-width="2"
+              ></path>
+              <path
+                d="M12 18V22"
+                stroke="var(--electric-cyan)"
+                stroke-width="2"
+              ></path>
+              <path
+                d="M7 22H17"
+                stroke="var(--electric-cyan)"
+                stroke-width="2"
+              ></path>
+            </svg>
+            <span>HUB71, Abu Dhabi</span>
+          </div>
+          <div class="flex items-center">
+            <svg
+              class="w-6 h-6 mr-3"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                x="2"
+                y="20"
+                width="20"
+                height="16"
+                rx="2"
+                stroke="var(--electric-cyan)"
+                stroke-width="2"
+              ></rect>
+              <path
+                d="M22 7L12 14L2 7"
+                stroke="var(--electric-cyan)"
+                stroke-width="2"
+              ></path>
+            </svg>
+            <span>{{ contactEmail }}</span>
+          </div>
+          <div class="flex items-center">
+            <svg
+              class="w-6 h-6 mr-3"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000"
+            >
+              <path
+                d="M3 20H21"
+                stroke="var(--electric-cyan)"
+                stroke-width="2"
+              ></path>
+              <path
+                d="M3 3H21"
+                stroke="var(--electric-cyan)"
+                stroke-width="2"
+              ></path>
+              <path
+                d="M3 3H21"
+                stroke="var(--electric-cyan)"
+                stroke-width="2"
+              ></path>
+            </svg>
+            <span>www.hpsaviation.com</span>
+          </div>
+        </div>
+        <div class="mt-6">
+          <h3 class="text-xl font-bold mb-2">Founder</h3>
+          <p class="text-lg">Ahmed Hamza</p>
+          <p class="text-gray-400">CEO & Chief Engineer</p>
+        </div>
+        <div class="mt-8 flex justify-center gap-4">
+          <button class="btn" (click)="scheduleMeeting()">
+            Schedule Meeting
+          </button>
+          <button class="btn" (click)="downloadDeck()">Download Deck</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="nav-dot">
+  <div
+    class="nav-dot"
+    *ngFor="let slide of slides; let i = index; i"
+    [class.active]="currentSlide === i"
+    (click)="showSlide(i)"
+  ></div>
+</div>
+
+<div class="nav-arrows d-flex justify-center">
+  <div>
+    <button class="nav-arrow prev" (click)="previousSlide()">◀</button>
+    <button class="nav-arrow next" (click)="nextSlide()">▶</button>
+  </div>
+</div>

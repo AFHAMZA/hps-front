@@ -10,7 +10,7 @@ import { RouterLink } from '@angular/router';
 import emailjs from 'emailjs-com';
 import { ToastrService } from 'ngx-toastr';
 import { environment } from '../../../environments/environment';
-
+import { SoundService } from '../../services/sound.service';
 @Component({
   selector: 'app-call-to-action-section',
   standalone: true,
@@ -23,6 +23,12 @@ export class CallToActionSectionComponent implements AfterViewInit {
   @ViewChild('contactForm') contactFormRef!: ElementRef<HTMLFormElement>;
 
   private toastr = inject(ToastrService);
+
+  playHoverSound() {
+    this.soundService.playSound('/assets/sounds/1.wav');
+  }
+
+  constructor(private soundService: SoundService) {}
 
   ngAfterViewInit(): void {
     const form = this.contactFormRef.nativeElement;

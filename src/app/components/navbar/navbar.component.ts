@@ -2,6 +2,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, AfterViewInit } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
+import { SoundService } from '../../services/sound.service';
 
 @Component({
   selector: 'app-navbar',
@@ -13,7 +14,14 @@ import { Router, RouterLink } from '@angular/router';
 export class NavbarComponent implements AfterViewInit {
   isMobileMenuOpen: boolean = false;
 
-  constructor(private router: Router) {}
+   
+    
+
+  constructor(private router: Router,private soundService: SoundService) {}
+
+  playHoverSound() {
+    this.soundService.playSound('/assets/sounds/1.wav');
+  }
 
   toggleMobileMenu(): void {
     this.isMobileMenuOpen = !this.isMobileMenuOpen;
