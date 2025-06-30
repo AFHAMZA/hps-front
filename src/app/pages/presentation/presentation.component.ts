@@ -40,7 +40,8 @@ export class PresentationComponent implements OnInit {
   }
 
   prevSlide(): void {
-    this.currentSlide = (this.currentSlide - 1 + this.slides.length) % this.slides.length;
+    this.currentSlide =
+      (this.currentSlide - 1 + this.slides.length) % this.slides.length;
     this.updateProgressBar();
   }
 

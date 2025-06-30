@@ -40,7 +40,7 @@
     padding: 1.5rem;
     background: rgba(10, 25, 41, 0.7);
     backdrop-filter: blur(5px);
-    
+
 }
 
 .grid-pattern {
@@ -166,7 +166,7 @@
     top: 0;
     height: 100%;
     width: 2px;
-    background: linear-gradient(to bottom,#00e9f5,#00ffcc);
+    background: linear-gradient(to bottom, #00e9f5, #00ffcc);
 }
 
 .timeline-item::after {
