@@ -1,6 +1,7 @@
 <div class="progress-bar" [style.width.%]="progressWidth"></div>
 
-<div class="slide-container">
+<div class="slide-container" #presentationContent
+>
   <!-- Slide 1: Cover -->
   <div class="slide" [ngClass]="{ active: currentSlide === 0 }" id="slide1">
     <div class="grid-pattern"></div>
@@ -1016,8 +1017,8 @@
           <p class="text-gray-400">CEO & Chief Engineer</p>
         </div>
         <div class="mt-8 flex justify-center gap-4">
-          <button class="btn">Schedule Meeting</button>
-          <button class="btn">Download Deck</button>
+          <a href="https://calendly.com/ahmedhamza/30min" target="_blank" class="btn">Schedule Meeting</a>
+          <button class="btn" (click)="downloadAsPdf()">Download Deck</button>
         </div>
       </div>
     </div>
