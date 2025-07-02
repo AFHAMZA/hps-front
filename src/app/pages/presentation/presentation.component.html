@@ -1,55 +1,15 @@
 <div class="progress-bar" [style.width.%]="progressWidth"></div>
 
-<div class="slide-container" #presentationContent
->
+<div class="slide-container" #presentationContent>
   <!-- Slide 1: Cover -->
   <div class="slide" [ngClass]="{ active: currentSlide === 0 }" id="slide1">
     <div class="grid-pattern"></div>
     <div class="flex flex-col items-center justify-center h-full text-center">
       <div class="floating">
-        <svg
-          class="w-40 h-40 mb-8"
-          viewBox="0 0 200 200"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <defs>
-            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop
-                offset="0%"
-                style="stop-color: #00e5ff; stop-opacity: 1"
-              ></stop>
-              <stop
-                offset="100%"
-                style="stop-color: #00ffcc; stop-opacity: 1"
-              ></stop>
-            </linearGradient>
-          </defs>
-          <path
-            fill="url(#grad1)"
-            d="M100,20 L160,60 L160,140 L100,180 L40,140 L40,60 Z"
-          ></path>
-          <path
-            fill="none"
-            stroke="white"
-            stroke-width="2"
-            d="M100,40 L140,65 L140,115 L100,140 L60,115 L60,65 Z"
-          ></path>
-          <circle cx="100" cy="100" r="15" fill="white"></circle>
-          <path
-            fill="none"
-            stroke="white"
-            stroke-width="2"
-            d="M70,80 C70,50 130,50 130,80"
-          ></path>
-          <path
-            fill="none"
-            stroke="white"
-            stroke-width="2"
-            d="M70,120 C70,150 130,150 130,120"
-          ></path>
-        </svg>
+        <img src="assets/img/logo.png" class="mb-4" alt="" width="350" />
+
       </div>
-      <h1 class="text-6xl mb-4 title">HPS AVIATION</h1>
+      <!-- <h1 class="text-6xl mb-4 title">HPS AVIATION</h1> -->
       <p class="text-xl mb-8 subtitle">The Next Step to the Sky</p>
       <div class="tech-border mt-8 max-w-lg">
         <p class="text-gray-300">
@@ -63,8 +23,8 @@
   <!-- Slide 2: The Problem -->
   <div class="slide" [ngClass]="{ active: currentSlide === 1 }" id="slide2">
     <div class="grid-pattern"></div>
-    <div class="max-w-4xl mx-auto">
-      <h2 class="text-4xl mb-6 title">Why Propellers Are Holding Us Back</h2>
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl mb-6 title">Why Propellers Are Holding Us Back</h2>
       <div class="flex flex-col md:flex-row gap-8">
         <div class="tech-border flex-1">
           <div class="flex items-center mb-4">
@@ -153,11 +113,17 @@
               <path d="M15 9L9 15" stroke="#00e5ff" stroke-width="2"></path>
               <path d="M9 9L15 15" stroke="#00e5ff" stroke-width="2"></path>
             </svg>
-            <h3 class="text-xl font-bold">Safety Concerns</h3>
+            <h3 class="text-xl font-bold">Bulky and Exposed Design</h3>
           </div>
           <p class="text-gray-300">
-            Exposed high-speed propeller blades pose significant safety risks to
-            operators, passengers, and bystanders.
+            Propellers are large and usually exposed, which:
+          </p>
+          <p class="text-gray-300">Increases drag</p>
+          <p class="text-gray-300">
+            Poses safety hazards to people or nearby objects
+          </p>
+          <p class="text-gray-300">
+            Limits vehicle compactness and urban landing use
           </p>
         </div>
       </div>
@@ -167,8 +133,8 @@
   <!-- Slide 3: The Solution -->
   <div class="slide" [ngClass]="{ active: currentSlide === 2 }" id="slide3">
     <div class="grid-pattern"></div>
-    <div class="max-w-4xl mx-auto">
-      <h2 class="text-4xl mb-6 title">Humming Propulsion System (HPS)</h2>
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl mb-6 title">Humming Propulsion System (HPS)</h2>
       <div class="flex flex-col md:flex-row gap-8">
         <div class="md:w-1/2">
           <div class="tech-border h-full">
@@ -327,8 +293,8 @@
   <!-- Slide 4: The Application -->
   <div class="slide" [ngClass]="{ active: currentSlide === 3 }" id="slide4">
     <div class="grid-pattern"></div>
-    <div class="max-w-4xl mx-auto">
-      <h2 class="text-4xl mb-6 title">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl mb-6 title">
         CROW: The First Hydrogen-Powered Flying Car
       </h2>
       <div class="flex flex-col md:flex-row gap-8">
@@ -427,121 +393,62 @@
                 </svg>
                 <span>Can land on water and drive on roads</span>
               </div>
+              <div class="spec-item2">
+                <svg
+                  class="spec-icon w-6 h-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M3 12H21" stroke="#00e5ff" stroke-width="2"></path>
+                  <path d="M3 6H21" stroke="#00e5ff" stroke-width="2"></path>
+                  <path d="M3 18H21" stroke="#00e5ff" stroke-width="2"></path>
+                </svg>
+                <span>Noise Level 65 dB at 5 meters</span>
+              </div>
+              <div class="spec-item2">
+                <svg
+                  class="spec-icon w-6 h-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M3 12H21" stroke="#00e5ff" stroke-width="2"></path>
+                  <path d="M3 6H21" stroke="#00e5ff" stroke-width="2"></path>
+                  <path d="M3 18H21" stroke="#00e5ff" stroke-width="2"></path>
+                </svg>
+                <span>10 safety systems</span>
+              </div>
+              <div class="spec-item2">
+                <svg
+                  class="spec-icon w-6 h-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M3 12H21" stroke="#00e5ff" stroke-width="2"></path>
+                  <path d="M3 6H21" stroke="#00e5ff" stroke-width="2"></path>
+                  <path d="M3 18H21" stroke="#00e5ff" stroke-width="2"></path>
+                </svg>
+                <span>Hydrogen-Powered</span>
+              </div>
             </div>
           </div>
         </div>
         <div class="md:w-1/2">
           <div class="tech-border h-full flex flex-col justify-between">
             <div>
-              <h3 class="text-2xl mb-4 subtitle">Dual Power System</h3>
+              <h3 class="text-2xl mb-4 subtitle">
+                CROW is the world's first flying car designed to match the
+                Hollywood dream — a true car that flies, combining the look and
+                feel of a futuristic vehicle with the power and agility of
+                advanced aviation technology.
+              </h3>
               <p class="mb-4 text-gray-300">
-                CROW combines hydrogen fuel cells with advanced battery
-                technology for optimal power management.
+                Powered by the revolutionary Humming Propulsion System (HPS),
+                CROW is compact, efficient, and versatile, built for both urban
+                and intercity mobility.
               </p>
-            </div>
-            <div class="mt-4">
-              <svg
-                class="w-full h-48"
-                viewBox="0 0 300 150"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <defs>
-                  <linearGradient
-                    id="carGrad"
-                    x1="0%"
-                    y1="0%"
-                    x2="100%"
-                    y2="0%"
-                  >
-                    <stop
-                      offset="0%"
-                      style="stop-color: #00e5ff; stop-opacity: 1"
-                    ></stop>
-                    <stop
-                      offset="100%"
-                      style="stop-color: #00ffcc; stop-opacity: 1"
-                    ></stop>
-                  </linearGradient>
-                </defs>
-                <path
-                  d="M50,80 C50,60 70,50 100,50 L200,50 C230,50 250,60 250,80 L250,100 C250,110 240,120 220,120 L80,120 C60,120 50,110 50,100 Z"
-                  fill="none"
-                  stroke="url(#carGrad)"
-                  stroke-width="2"
-                ></path>
-                <path
-                  d="M70,120 L80,140 L220,140 L230,120"
-                  fill="none"
-                  stroke="url(#carGrad)"
-                  stroke-width="2"
-                ></path>
-                <circle
-                  cx="100"
-                  cy="140"
-                  r="10"
-                  fill="none"
-                  stroke="white"
-                  stroke-width="1"
-                ></circle>
-                <circle
-                  cx="200"
-                  cy="140"
-                  r="10"
-                  fill="none"
-                  stroke="white"
-                  stroke-width="1"
-                ></circle>
-                <path
-                  d="M100,50 L120,20 L180,20 L200,50"
-                  fill="none"
-                  stroke="url(#carGrad)"
-                  stroke-width="2"
-                ></path>
-                <rect
-                  x="130"
-                  y="30"
-                  width="40"
-                  height="20"
-                  fill="none"
-                  stroke="white"
-                  stroke-width="1"
-                  opacity="0.5"
-                ></rect>
-                <circle
-                  cx="80"
-                  cy="70"
-                  r="15"
-                  fill="none"
-                  stroke="url(#carGrad)"
-                  stroke-width="2"
-                >
-                  <animateTransform
-                    attributeName="transform"
-                    type="rotate"
-                    from="0 80 70"
-                    to="360 80 70"
-                    dur="2s"
-                    repeatCount="indefinite"
-                  ></animateTransform>
-                </circle>
-                <circle
-                  cx="220"
-                  cy="70"
-                  r="15"
-                  fill="none"
-                  stroke="url(#carGrad)"
-                  stroke-width="2"
-                >
-                  <animateTransform
-                    attributeName="transform"
-                    type="rotate"
-                    from="0 220 70"
-                    to="360 220 70"
-                    dur="2s"
-                    repeatCount="indefinite"
-                  ></animateTransform>
-                </circle>
-              </svg>
             </div>
           </div>
         </div>
@@ -552,8 +459,8 @@
   <!-- Slide 5: Market Vision -->
   <div class="slide" [ngClass]="{ active: currentSlide === 4 }" id="slide5">
     <div class="grid-pattern"></div>
-    <div class="max-w-4xl mx-auto">
-      <h2 class="text-4xl mb-6 title">Market Vision</h2>
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl mb-6 title">Market Vision</h2>
       <div class="flex flex-col md:flex-row gap-8">
         <div class="md:w-1/3">
           <div class="tech-border h-full text-center p-6">
@@ -561,7 +468,7 @@
               class="w-16 h-16 mx-auto mb-4"
               viewBox="0 0 24 24"
               fill="none"
-              xmlns="http://www.w3.org/2000/svg"
+              
             >
               <path
                 d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
@@ -590,7 +497,7 @@
               class="w-16 h-16 mx-auto mb-4"
               viewBox="0 0 24 24"
               fill="none"
-              xmlns="http://www.w3.org/2000/svg"
+              
             >
               <path
                 d="M21 16V8.00002C21 6.34317 19.6569 5.00002 18 5.00002H6C4.34315 5.00002 3 6.34317 3 8.00002V16C3 17.6569 4.34315 19 6 19H18C19.6569 19 21 17.6569 21 16Z"
@@ -613,7 +520,7 @@
               class="w-16 h-16 mx-auto mb-4"
               viewBox="0 0 24 24"
               fill="none"
-              xmlns="http://www.w3.org/2000/svg"
+              
             >
               <path d="M3 20H21" stroke="url(#grad1)" stroke-width="2"></path>
               <path
@@ -661,43 +568,63 @@
   <!-- Slide 6: Roadmap -->
   <div class="slide" [ngClass]="{ active: currentSlide === 5 }" id="slide6">
     <div class="grid-pattern"></div>
-    <div class="max-w-4xl mx-auto">
-      <h2 class="text-4xl mb-6 title">Roadmap to Revolution</h2>
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl mb-6 title">Roadmap to Revolution</h2>
       <div class="tech-border">
         <div class="timeline">
           <div class="timeline-item">
-            <h3 class="text-xl font-bold mb-2">R&D: 2012–2022</h3>
+            <h3 class="text-xl font-bold mb-2">
+              Phase 1: Concept & Research (2014 – 2020)
+            </h3>
             <p class="text-gray-300">
               Fundamental research and technology development. Patent portfolio
               established with 12 core technologies.
             </p>
           </div>
           <div class="timeline-item">
-            <h3 class="text-xl font-bold mb-2">Prototype: 2023–2025</h3>
+            <h3 class="text-xl font-bold mb-2">
+              Phase 2: Advanced Prototyping & Company Formation (2021 – First
+              Half 2025)
+            </h3>
             <p class="text-gray-300">
               Full-scale working prototype of the CROW flying car. Testing and
               certification process begins.
             </p>
           </div>
           <div class="timeline-item">
-            <h3 class="text-xl font-bold mb-2">First Flight: 2026</h3>
+            <h3 class="text-xl font-bold mb-2">
+              Phase 3: MVP Development & Lab Construction (Second Half 2025)
+            </h3>
             <p class="text-gray-300">
               Maiden voyage of the CROW. Public demonstrations and regulatory
               approval process.
             </p>
           </div>
           <div class="timeline-item">
-            <h3 class="text-xl font-bold mb-2">Manufacturing: 2027</h3>
+            <h3 class="text-xl font-bold mb-2">
+              Phase 4: CROW – First Flying Car Prototype (2026 – 2027)
+            </h3>
             <p class="text-gray-300">
               Production facility established. Supply chain secured and
               manufacturing begins.
             </p>
           </div>
           <div class="timeline-item">
-            <h3 class="text-xl font-bold mb-2">Launch: 2028</h3>
+            <h3 class="text-xl font-bold mb-2">
+              Phase 5: Market Entry & Early Sales (2028 – 2029)
+            </h3>
             <p class="text-gray-300">
               Commercial launch of the CROW flying car. Initial deliveries to
               strategic partners and early adopters.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <h3 class="text-xl font-bold mb-2">
+              Phase 6: Expansion & Diversification (2030 and Beyond)
+            </h3>
+            <p class="text-gray-300">
+              Scale the business by expanding HPS integration across multiple
+              flying platforms beyond CROW
             </p>
           </div>
         </div>
@@ -706,7 +633,96 @@
         <svg
           class="w-full h-12"
           viewBox="0 0 600 40"
-          xmlns="http://www.w3.org/2000/svg"
+          
+        >
+          <line
+            x1="0"
+            y1="15"
+            x2="600"
+            y2="15"
+            stroke="#333"
+            stroke-width="2"
+          ></line>
+          <circle cx="20" cy="15" r="8" fill="#00e5ff"></circle>
+          <text x="20" y="35" text-anchor="middle" fill="white" font-size="12">
+            2014
+          </text>
+          <circle cx="90" cy="15" r="8" fill="#00e5ff"></circle>
+          <text x="90" y="35" text-anchor="middle" fill="white" font-size="12">
+            2020
+          </text>
+          <circle cx="160" cy="15" r="8" fill="#00e5ff"></circle>
+          <text x="160" y="35" text-anchor="middle" fill="white" font-size="12">
+            2021
+          </text>
+          <circle cx="230" cy="15" r="8" fill="#00e5ff"></circle>
+          <text x="230" y="35" text-anchor="middle" fill="white" font-size="12">
+            2025
+          </text>
+          <circle cx="300" cy="15" r="8" fill="#00e5ff"></circle>
+          <text x="300" y="35" text-anchor="middle" fill="white" font-size="12">
+            2026
+          </text>
+          <circle cx="370" cy="15" r="8" fill="#00e5ff"></circle>
+          <text x="370" y="35" text-anchor="middle" fill="white" font-size="12">
+            2027
+          </text>
+          <circle cx="440" cy="15" r="8" fill="#00e5ff"></circle>
+          <text x="440" y="35" text-anchor="middle" fill="white" font-size="12">
+            2028
+          </text>
+          <circle cx="510" cy="15" r="8" fill="#00e5ff"></circle>
+          <text x="510" y="35" text-anchor="middle" fill="white" font-size="12">
+            2029
+          </text>
+          <circle cx="580" cy="15" r="8" fill="#00e5ff"></circle>
+          <text x="580" y="35" text-anchor="middle" fill="white" font-size="12">
+            2030
+          </text>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide" [ngClass]="{ active: currentSlide === 6 }" id="slide7">
+    <div class="grid-pattern"></div>
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl mb-6 title">
+        Phase 1: Concept & Research (2014 – 2020)
+      </h2>
+      <div class="tech-border">
+        <div class="timeline">
+          <div class="timeline-item">
+            <ul class="text-gray-300 list-disc ml-6">
+              <li>2014 – Initial idea inspired by bird and insect flight</li>
+              <li>
+                2015 – Mathematical modelling of hummingbird wing patterns using
+                MATLAB & ANSYS
+              </li>
+              <li>
+                2016 – Resigned from military R&D to dedicate full-time focus
+              </li>
+              <li>
+                2017–2020 – Developed and tested multiple mechanical prototypes
+              </li>
+              <li>Built CAD, CFD, and 3D-printed models</li>
+              <li>
+                Achieved 25% higher efficiency compared to traditional
+                propulsion
+              </li>
+              <li>
+                Validated full 6-DOF control without tilting the propulsion
+                system
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="mt-8 flex justify-center">
+        <svg
+          class="w-full h-12"
+          viewBox="0 0 600 40"
+          
         >
           <line
             x1="0"
@@ -718,23 +734,272 @@
           ></line>
           <circle cx="50" cy="15" r="8" fill="#00e5ff"></circle>
           <text x="50" y="35" text-anchor="middle" fill="white" font-size="12">
-            2012
+            2014
           </text>
           <circle cx="175" cy="15" r="8" fill="#00e5ff"></circle>
           <text x="175" y="35" text-anchor="middle" fill="white" font-size="12">
-            2023
+            2015
           </text>
-          <circle cx="300" cy="15" r="8" fill="#00ffcc"></circle>
+          <circle cx="300" cy="15" r="8" fill="#00e5ff"></circle>
           <text x="300" y="35" text-anchor="middle" fill="white" font-size="12">
+            2016
+          </text>
+          <circle cx="425" cy="15" r="8" fill="#00e5ff"></circle>
+          <text x="425" y="35" text-anchor="middle" fill="white" font-size="12">
+            2017
+          </text>
+          <circle cx="550" cy="15" r="8" fill="#00e5ff"></circle>
+          <text x="550" y="35" text-anchor="middle" fill="white" font-size="12">
+            2020
+          </text>
+        </svg>
+      </div>
+    </div>
+  </div>
+  <div class="slide" [ngClass]="{ active: currentSlide === 7 }" id="slide8">
+    <div class="grid-pattern"></div>
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-2xl mb-6 title">
+        Phase 2: Advanced Prototyping & Company Formation (2021 – First Half
+        2025)
+      </h2>
+      <div class="tech-border">
+        <div class="timeline">
+          <div class="timeline-item">
+            <ul class="text-gray-300 list-disc ml-6">
+              <li>Simplified HPS design for manufacturability</li>
+              <li>
+                Integrated hybrid control (rotational + oscillatory motion)
+              </li>
+              <li>Finalized scalable axial-flux electric motor architecture</li>
+              <li>2024 – Designed full MVP model</li>
+              <li>Began company setup in Abu Dhabi Global Market (ADGM)</li>
+              <li>
+                Registered HPS Aviation and prepared for equity crowdfunding
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="mt-8 flex justify-center">
+        <svg
+          class="w-full h-12"
+          viewBox="0 0 600 40"
+          
+        >
+          <line
+            x1="0"
+            y1="15"
+            x2="600"
+            y2="15"
+            stroke="#333"
+            stroke-width="2"
+          ></line>
+          <circle cx="50" cy="15" r="8" fill="#00e5ff"></circle>
+          <text x="50" y="35" text-anchor="middle" fill="white" font-size="12">
+            2021
+          </text>
+
+          <circle cx="550" cy="15" r="8" fill="#00e5ff"></circle>
+          <text x="550" y="35" text-anchor="middle" fill="white" font-size="12">
+            2025
+          </text>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide" [ngClass]="{ active: currentSlide === 8 }" id="slide9">
+    <div class="grid-pattern"></div>
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl mb-6 title">
+        Phase 3: MVP Development & Lab Construction (Second Half 2025)
+      </h2>
+      <div class="tech-border">
+        <div class="timeline">
+          <div class="timeline-item">
+            <ul class="text-gray-300 list-disc ml-6">
+              <li>Target funding: $1.5M</li>
+              <li>Build engineering team (CFD, mechanical, business)</li>
+              <li>
+                Set up R&D lab + acquire equipment (5-axis CNC, lathe, metal 3D
+                printer)
+              </li>
+              <li>Complete MVP for HPS propulsion system within 6 months</li>
+              <li>
+                Finish Patents registration + certification & safety testing
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="mt-8 flex justify-center">
+        <svg
+          class="w-full h-12"
+          viewBox="0 0 600 40"
+          
+        >
+          <line
+            x1="0"
+            y1="15"
+            x2="600"
+            y2="15"
+            stroke="#333"
+            stroke-width="2"
+          ></line>
+          <circle cx="300" cy="15" r="8" fill="#00e5ff"></circle>
+          <text x="300" y="35" text-anchor="middle" fill="white" font-size="12">
+            2025
+          </text>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide" [ngClass]="{ active: currentSlide === 9 }" id="slide10">
+    <div class="grid-pattern"></div>
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl mb-6 title">
+        Phase 4: CROW – First Flying Car Prototype (2026 – 2027)
+      </h2>
+      <div class="tech-border">
+        <div class="timeline">
+          <div class="timeline-item">
+            <ul class="text-gray-300 list-disc ml-6">
+              <li>Begin full-scale build of CROW</li>
+              <li>Materials: carbon fiber + bamboo composite</li>
+              <li>Power: Hydrogen fuel cells + safety batteries</li>
+              <li>
+                Integrate 10 advanced safety systems (including Aerospike
+                emergency landing)
+              </li>
+              <li>Flight tests, government compliance, and certification</li>
+              <li>Showcase to investors, public, and strategic partners</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="mt-8 flex justify-center">
+        <svg
+          class="w-full h-12"
+          viewBox="0 0 600 40"
+          
+        >
+          <line
+            x1="0"
+            y1="15"
+            x2="600"
+            y2="15"
+            stroke="#333"
+            stroke-width="2"
+          ></line>
+          <circle cx="50" cy="15" r="8" fill="#00e5ff"></circle>
+          <text x="50" y="35" text-anchor="middle" fill="white" font-size="12">
             2026
           </text>
-          <circle cx="425" cy="15" r="8" fill="#00ffcc"></circle>
-          <text x="425" y="35" text-anchor="middle" fill="white" font-size="12">
+
+          <circle cx="550" cy="15" r="8" fill="#00e5ff"></circle>
+          <text x="550" y="35" text-anchor="middle" fill="white" font-size="12">
             2027
           </text>
-          <circle cx="550" cy="15" r="8" fill="#00ffcc"></circle>
-          <text x="550" y="35" text-anchor="middle" fill="white" font-size="12">
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide" [ngClass]="{ active: currentSlide === 10 }" id="slide11">
+    <div class="grid-pattern"></div>
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl mb-6 title">
+        Phase 5: Market Entry & Early Sales (2028 – 2029)
+      </h2>
+      <div class="tech-border">
+        <div class="timeline">
+          <div class="timeline-item">
+            <ul class="text-gray-300 list-disc ml-6">
+              <li>Launch limited production of CROW</li>
+              <li>Price: $500K – $1M based on configuration</li>
+              <li>
+                Build early adopter community (private owners, corporates,
+                tourism)
+              </li>
+              <li>
+                Begin licensing HPS propulsion to other platforms (eVTOLs,
+                amphibians)
+              </li>
+              <li>Establish after-sales, service, and maintenance network</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="mt-8 flex justify-center">
+        <svg
+          class="w-full h-12"
+          viewBox="0 0 600 40"
+          
+        >
+          <line
+            x1="0"
+            y1="15"
+            x2="600"
+            y2="15"
+            stroke="#333"
+            stroke-width="2"
+          ></line>
+          <circle cx="50" cy="15" r="8" fill="#00e5ff"></circle>
+          <text x="50" y="35" text-anchor="middle" fill="white" font-size="12">
             2028
+          </text>
+
+          <circle cx="550" cy="15" r="8" fill="#00e5ff"></circle>
+          <text x="550" y="35" text-anchor="middle" fill="white" font-size="12">
+            2029
+          </text>
+        </svg>
+      </div>
+    </div>
+  </div>
+  <div class="slide" [ngClass]="{ active: currentSlide === 11 }" id="slide12">
+    <div class="grid-pattern"></div>
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl mb-6 title">
+        Phase 6: Expansion & Diversification (2030 and Beyond)
+      </h2>
+      <div class="tech-border">
+        <div class="timeline">
+          <div class="timeline-item">
+            <ul class="text-gray-300 list-disc ml-6">
+              <li>Develop new air mobility vehicles:</li>
+              <li class="ml-6">Cargo drones</li>
+              <li class="ml-6">Flying taxis</li>
+              <li class="ml-6">Modular flying hotels</li>
+              <li>Integrate HPS in:</li>
+              <li class="ml-6">Defense applications</li>
+              <li class="ml-6">Construction air platforms</li>
+              <li class="ml-6">Human-scale drones</li>
+              <li>Explore open-source HPS licensing model</li>
+              <li>Global expansion and strategic joint ventures</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="mt-8 flex justify-center">
+        <svg
+          class="w-full h-12"
+          viewBox="0 0 600 40"
+          
+        >
+          <line
+            x1="0"
+            y1="15"
+            x2="600"
+            y2="15"
+            stroke="#333"
+            stroke-width="2"
+          ></line>
+          <circle cx="300" cy="15" r="8" fill="#00e5ff"></circle>
+          <text x="300" y="35" text-anchor="middle" fill="white" font-size="12">
+            2030
           </text>
         </svg>
       </div>
@@ -742,60 +1007,272 @@
   </div>
 
   <!-- Slide 7: Investment Opportunity -->
-  <div class="slide" [ngClass]="{ active: currentSlide === 6 }" id="slide7">
+  <div class="slide" [ngClass]="{ active: currentSlide === 12 }" id="slide13">
     <div class="grid-pattern"></div>
-    <div class="max-w-4xl mx-auto">
-      <h2 class="text-4xl mb-6 title">We're Raising Our First Round</h2>
+    <div class="max-w-8xl mx-auto">
+      <h2 class="text-3xl mb-6 title">
+        Crowdfunding Round — Own a Share in the Future of Aviation
+      </h2>
       <div class="flex flex-col md:flex-row gap-8">
         <div class="md:w-1/2">
           <div class="tech-border h-full">
-            <h3 class="text-2xl mb-4 subtitle">Funding Details</h3>
-            <div class="mb-6">
-              <div class="text-4xl font-bold text-electric-cyan">$25M</div>
-              <div class="text-sm text-gray-400">Series A Funding Target</div>
+            <h3 class="text-2xl mb-4 subtitle">Campaign Overview:</h3>
+            <div class="mb-4">
+              <div class="flex items-center mb-3">
+                <svg
+                  class="spec-icon w-6 h-6 mr-3"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  
+                >
+                  <path
+                    d="M5 13L9 17L19 7"
+                    stroke="#00e5ff"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+                <span class="font-bold">Funding Goal</span>
+              </div>
+              <p class="text-gray-300 ml-9">$1,500,000</p>
             </div>
-            <div class="mt-6">
-              <h4 class="text-lg font-bold mb-2">Use of Funds</h4>
-              <div class="flex items-center justify-between mb-2">
-                <span>R&D Acceleration</span>
-                <span class="text-electric-cyan">40%</span>
+            <div class="mb-4">
+              <div class="flex items-center mb-3">
+                <svg
+                  class="spec-icon w-6 h-6 mr-3"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  
+                >
+                  <path
+                    d="M5 13L9 17L19 7"
+                    stroke="#00e5ff"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+                <span class="font-bold">Share Price</span>
               </div>
-              <div class="w-full bg-gray-700 rounded-full h-2 mb-4">
-                <div
-                  class="bg-gradient-to-r from-electric-cyan to-neon-mint h-2 rounded-full"
-                  style="width: 40%"
-                ></div>
+              <p class="text-gray-300 ml-9">$1 per share</p>
+            </div>
+            <div class="mb-4">
+              <div class="flex items-center mb-3">
+                <svg
+                  class="spec-icon w-6 h-6 mr-3"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  
+                >
+                  <path
+                    d="M5 13L9 17L19 7"
+                    stroke="#00e5ff"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+                <span class="font-bold">Pre-Money Valuation</span>
               </div>
-              <div class="flex items-center justify-between mb-2">
-                <span>Prototype Development</span>
-                <span class="text-electric-cyan">30%</span>
+              <p class="text-gray-300 ml-9">$15,000,000</p>
+            </div>
+            <div class="mb-4">
+              <div class="flex items-center mb-3">
+                <svg
+                  class="spec-icon w-6 h-6 mr-3"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  
+                >
+                  <path
+                    d="M5 13L9 17L19 7"
+                    stroke="#00e5ff"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+                <span class="font-bold">Equity Offered</span>
               </div>
-              <div class="w-full bg-gray-700 rounded-full h-2 mb-4">
-                <div
-                  class="bg-gradient-to-r from-electric-cyan to-neon-mint h-2 rounded-full"
-                  style="width: 30%"
-                ></div>
+              <p class="text-gray-300 ml-9">10% of HPS Aviation</p>
+            </div>
+            <div class="mb-4">
+              <div class="flex items-center mb-3">
+                <svg
+                  class="spec-icon w-6 h-6 mr-3"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  
+                >
+                  <path
+                    d="M5 13L9 17L19 7"
+                    stroke="#00e5ff"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+                <span class="font-bold">Registered in</span>
               </div>
-              <div class="flex items-center justify-between mb-2">
-                <span>Team Expansion</span>
-                <span class="text-electric-cyan">20%</span>
+              <p class="text-gray-300 ml-9">ADGM, Abu Dhabi – UAE</p>
+            </div>
+          </div>
+        </div>
+        <div class="md:w-1/2">
+          <div class="tech-border h-full">
+            <h3 class="text-2xl mb-4 subtitle">Use of Funds</h3>
+            <div class="mb-4">
+              <div class="flex items-center mb-3">
+                <svg
+                  class="spec-icon w-6 h-6 mr-3"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  
+                >
+                  <path
+                    d="M5 13L9 17L19 7"
+                    stroke="#00e5ff"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+                <span class="font-bold"
+                  >Build the MVP of Humming Propulsion System (HPS)</span
+                >
               </div>
-              <div class="w-full bg-gray-700 rounded-full h-2 mb-4">
-                <div
-                  class="bg-gradient-to-r from-electric-cyan to-neon-mint h-2 rounded-full"
-                  style="width: 20%"
-                ></div>
+              <p class="text-gray-300 ml-9"></p>
+            </div>
+            <div class="mb-4">
+              <div class="flex items-center mb-3">
+                <svg
+                  class="spec-icon w-6 h-6 mr-3"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  
+                >
+                  <path
+                    d="M5 13L9 17L19 7"
+                    stroke="#00e5ff"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+                <span class="font-bold">Strategic Partnerships</span>
               </div>
-              <div class="flex items-center justify-between mb-2">
-                <span>Certification & Legal</span>
-                <span class="text-electric-cyan">10%</span>
+              <p class="text-gray-300 ml-9"></p>
+            </div>
+            <div class="mb-4">
+              <div class="flex items-center mb-3">
+                <svg
+                  class="spec-icon w-6 h-6 mr-3"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  
+                >
+                  <path
+                    d="M5 13L9 17L19 7"
+                    stroke="#00e5ff"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+                <span class="font-bold"
+                  >Construct R&D and prototyping lab in Abu Dhabi</span
+                >
               </div>
-              <div class="w-full bg-gray-700 rounded-full h-2 mb-4">
-                <div
-                  class="bg-gradient-to-r from-electric-cyan to-neon-mint h-2 rounded-full"
-                  style="width: 10%"
-                ></div>
+              <p class="text-gray-300 ml-9"></p>
+            </div>
+            <div class="mb-4">
+              <div class="flex items-center mb-3">
+                <svg
+                  class="spec-icon w-6 h-6 mr-3"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  
+                >
+                  <path
+                    d="M5 13L9 17L19 7"
+                    stroke="#00e5ff"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+                <span class="font-bold"
+                  >Acquire key equipment (3D printer, CNC, lathe)</span
+                >
               </div>
+              <p class="text-gray-300 ml-9"></p>
+            </div>
+            <div class="mb-4">
+              <div class="flex items-center mb-3">
+                <svg
+                  class="spec-icon w-6 h-6 mr-3"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  
+                >
+                  <path
+                    d="M5 13L9 17L19 7"
+                    stroke="#00e5ff"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+                <span class="font-bold"
+                  >Hire full core team: engineers, CFD, business dev</span
+                >
+              </div>
+              <p class="text-gray-300 ml-9"></p>
+            </div>
+            <div class="mb-4">
+              <div class="flex items-center mb-3">
+                <svg
+                  class="spec-icon w-6 h-6 mr-3"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  
+                >
+                  <path
+                    d="M5 13L9 17L19 7"
+                    stroke="#00e5ff"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+                <span class="font-bold"
+                  >Begin advanced development of CROW flying car</span
+                >
+              </div>
+              <p class="text-gray-300 ml-9"></p>
+            </div>
+            <div class="mb-4">
+              <div class="flex items-center mb-3">
+                <svg
+                  class="spec-icon w-6 h-6 mr-3"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  
+                >
+                  <path
+                    d="M5 13L9 17L19 7"
+                    stroke="#00e5ff"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+                <span class="font-bold"
+                  >Patent filing, certification, and early marketing</span
+                >
+              </div>
+              <p class="text-gray-300 ml-9"></p>
             </div>
           </div>
         </div>
@@ -808,7 +1285,7 @@
                   class="spec-icon w-6 h-6 mr-3"
                   viewBox="0 0 24 24"
                   fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
+                  
                 >
                   <path
                     d="M5 13L9 17L19 7"
@@ -831,7 +1308,7 @@
                   class="spec-icon w-6 h-6 mr-3"
                   viewBox="0 0 24 24"
                   fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
+                  
                 >
                   <path
                     d="M5 13L9 17L19 7"
@@ -854,7 +1331,7 @@
                   class="spec-icon w-6 h-6 mr-3"
                   viewBox="0 0 24 24"
                   fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
+                  
                 >
                   <path
                     d="M5 13L9 17L19 7"
@@ -896,59 +1373,133 @@
             </div>
           </div>
         </div>
+        <div class="md:w-1/2">
+          <div class="tech-border h-full">
+            <h3 class="text-2xl mb-4 subtitle">
+              Investor Perks (based on tiers):
+            </h3>
+            <div class="mb-4">
+              <div class="flex items-center mb-3">
+                <svg
+                  class="spec-icon w-6 h-6 mr-3"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5 13L9 17L19 7"
+                    stroke="#00e5ff"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+                <span class="font-bold"
+                  >Digital investor certificate & name in the credits</span
+                >
+              </div>
+              <p class="text-gray-300 ml-9"></p>
+            </div>
+            <div class="mb-4">
+              <div class="flex items-center mb-3">
+                <svg
+                  class="spec-icon w-6 h-6 mr-3"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5 13L9 17L19 7"
+                    stroke="#00e5ff"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+                <span class="font-bold">Exclusive merch (CAP, HPS shirt)</span>
+              </div>
+              <p class="text-gray-300 ml-9"></p>
+            </div>
+            <div class="mb-4">
+              <div class="flex items-center mb-3">
+                <svg
+                  class="spec-icon w-6 h-6 mr-3"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5 13L9 17L19 7"
+                    stroke="#00e5ff"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+                <span class="font-bold"
+                  >Access to flight sim & development updates</span
+                >
+              </div>
+              <p class="text-gray-300 ml-9"></p>
+            </div>
+            <div class="mb-4">
+              <div class="flex items-center mb-3">
+                <svg
+                  class="spec-icon w-6 h-6 mr-3"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5 13L9 17L19 7"
+                    stroke="#00e5ff"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+                <span class="font-bold"
+                  >Early reservation or discount for CROW when launched</span
+                >
+              </div>
+              <p class="text-gray-300 ml-9"></p>
+            </div>
+            <div class="mb-4">
+              <div class="flex items-center mb-3">
+                <svg
+                  class="spec-icon w-6 h-6 mr-3"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5 13L9 17L19 7"
+                    stroke="#00e5ff"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+                <span class="font-bold"
+                  >VIP invite to MVP launch event in Abu Dhabi</span
+                >
+              </div>
+              <p class="text-gray-300 ml-9"></p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 
   <!-- Slide 8: Contact -->
-  <div class="slide" [ngClass]="{ active: currentSlide === 7 }" id="slide8">
+  <div class="slide" [ngClass]="{ active: currentSlide === 13 }" id="slide14">
     <div class="grid-pattern"></div>
-    <div class="max-w-4xl mx-auto flex flex-col items-center">
-      <h2 class="text-4xl mb-6 title">Join Our Journey</h2>
+    <div class="max-w-6xl mx-auto flex flex-col items-center">
+      <h2 class="text-3xl mb-6 title">Join Our Journey</h2>
       <div class="tech-border w-full max-w-lg text-center">
-        <div class="mb-6">
-          <svg
-            class="w-24 h-24 mx-auto mb-4"
-            viewBox="0 0 200 200"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <defs>
-              <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop
-                  offset="0%"
-                  style="stop-color: #00e5ff; stop-opacity: 1"
-                ></stop>
-                <stop
-                  offset="100%"
-                  style="stop-color: #00ffcc; stop-opacity: 1"
-                ></stop>
-              </linearGradient>
-            </defs>
-            <path
-              fill="url(#grad3)"
-              d="M100,20 L160,60 L160,140 L100,180 L40,140 L40,60 Z"
-            ></path>
-            <path
-              fill="none"
-              stroke="white"
-              stroke-width="2"
-              d="M100,40 L140,65 L140,115 L100,140 L60,115 L60,65 Z"
-            ></path>
-            <circle cx="100" cy="100" r="15" fill="white"></circle>
-            <path
-              fill="none"
-              stroke="white"
-              stroke-width="2"
-              d="M70,80 C70,50 130,50 130,80"
-            ></path>
-            <path
-              fill="none"
-              stroke="white"
-              stroke-width="2"
-              d="M70,120 C70,150 130,150 130,120"
-            ></path>
-          </svg>
-          <h1 class="text-3xl mb-2 title">HPS AVIATION</h1>
+        <div class="mb-6 flex flex-col items-center">
+          <img src="assets/img/logo.png" class="mb-4" alt="" width="200" />
           <p class="text-xl subtitle">The Next Step to the Sky</p>
         </div>
         <div class="flex flex-col items-center gap-4 mb-6">
@@ -967,7 +1518,7 @@
               <path d="M12 18V22" stroke="#00e5ff" stroke-width="2"></path>
               <path d="M7 22H17" stroke="#00e5ff" stroke-width="2"></path>
             </svg>
-            <span>HUB71, Abu Dhabi</span>
+            <span>ADGM , AL MYRAH , ABU DHABI</span>
           </div>
           <div class="flex items-center">
             <svg
@@ -1017,8 +1568,16 @@
           <p class="text-gray-400">CEO & Chief Engineer</p>
         </div>
         <div class="mt-8 flex justify-center gap-4">
-          <a href="https://calendly.com/a7medfawzy7amza/30min" target="_blank" class="btn">Schedule Meeting</a>
-          <a class="btn" target="_blank" href="assets/pdf/1.pdf">Download Deck</a>
+          <a
+            href="https://calendly.com/a7medfawzy7amza/30min"
+            target="_blank"
+            class="btn"
+            >Schedule Meeting</a
+          >
+          <a class="btn" href="assets/pdf/1.pdf" download="HPS-Aviation-Presentation.pdf">
+            Download Deck
+          </a>
+          
         </div>
       </div>
     </div>

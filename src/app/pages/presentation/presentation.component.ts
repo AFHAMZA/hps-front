@@ -24,9 +24,9 @@ import domtoimage from 'dom-to-image-more';
 })
 export class PresentationComponent implements OnInit {
   @ViewChild('presentationContent') presentationContent!: ElementRef;
-  contactEmail = 'connect@hpsaviation.com';
+  contactEmail = 'investor@hpsaviation.com';
   currentSlide: number = 0;
-  slides: number[] = Array(8).fill(0);
+  slides: number[] = Array(14).fill(0);
   progressWidth: number = 0;
   isDownloading: boolean = false;
 
