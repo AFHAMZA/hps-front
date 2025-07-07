@@ -3,6 +3,8 @@ export const environment = {
   apiUrl: 'http://localhost:9000/api',
   // apiUrl: 'https://b079-156-214-92-76.ngrok-free.app/api',
 
+  contactEmail: 'info@hpsaviation.com',
+
   emailjs: {
     serviceId: 'service_3nbfnsj',
     templateId: 'template_4t77qtg',

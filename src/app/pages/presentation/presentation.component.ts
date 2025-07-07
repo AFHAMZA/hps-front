@@ -6,7 +6,7 @@ import { FooterComponent } from '../../components/footer/footer.component';
 import { CommonModule } from '@angular/common';
 import html2pdf from 'html2pdf.js';
 import jsPDF from 'jspdf';
-
+import { environment } from '../../../environments/environment';
 import domtoimage from 'dom-to-image-more';
 
 @Component({
@@ -24,7 +24,7 @@ import domtoimage from 'dom-to-image-more';
 })
 export class PresentationComponent implements OnInit {
   @ViewChild('presentationContent') presentationContent!: ElementRef;
-  contactEmail = 'investor@hpsaviation.com';
+  contactEmail = environment.contactEmail;
   currentSlide: number = 0;
   slides: number[] = Array(14).fill(0);
   progressWidth: number = 0;

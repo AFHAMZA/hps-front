@@ -21,7 +21,7 @@ import { SoundService } from '../../services/sound.service';
 export class CallToActionSectionComponent implements AfterViewInit {
   email = environment.emailjs.email;
   @ViewChild('contactForm') contactFormRef!: ElementRef<HTMLFormElement>;
-  contact = 'investor@hpsaviation.com';
+  contact = environment.contactEmail;
 
   private toastr = inject(ToastrService);
 
